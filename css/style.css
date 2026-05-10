@@ -1,0 +1,85 @@
+@font-face {
+    font-family: OpenSans;
+    src: url('fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('fonts/OpenSans-Regular.woff') format('woff'),
+        url('fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('fonts/OpenSans-Bold.woff') format('woff'),
+        url('fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-page {
+    max-width: 360px;
+    margin: 0 auto;
+    background-color: white;
+
+}
+
+.main-page__header {
+    width: 100%;
+    height: 640px;
+    display: block;
+    position: relative;
+}
+
+.header__banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-page__header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.600;
+    background-color: #000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.intro {
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    z-index: 1;
+    text-align: center;
+    margin-left: 44px;
+    margin-right: 39px;
+    top: 329px;
+    height: 91px;
+    font-size: 26px;
+
+}
+
+
+
+@media (min-width: 768px) {
+    /* tablet */
+}
+
+
+@media (min-width: 1024px) {
+    /* desktop */
+}
