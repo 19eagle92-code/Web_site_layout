@@ -80,7 +80,6 @@ body {
     pointer-events: none;
 }
 
-
 .header__content {
     position: relative;
     z-index: 1;
@@ -91,6 +90,33 @@ body {
 
     padding-top: 225px;
     padding-inline: 34px;
+}
+
+.menu {
+    width: 23px;
+    height: 4px;
+    background-color: #ffffff;
+    top: -186px;
+    left: 152px;
+
+    position: relative;
+}
+
+.menu::before,
+.menu::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.menu::before {
+    top: -8px;
+}
+
+.menu::after {
+    bottom: -8px;
 }
 
 .header__logo {
@@ -133,7 +159,8 @@ body {
 
 }
 
-/* footer */
+/* FOOTER
+========================= */
 
 .footer__socials {
     width: 330px;
@@ -169,13 +196,10 @@ body {
     font-weight: 700;
     color: #999999;
     font-size: 0.75rem;
-    /* text-align: justify; */
     margin-top: 45px;
     margin-bottom: 45px;
     text-align: center;
 }
-
-
 
 
 @media (min-width: 768px) {
