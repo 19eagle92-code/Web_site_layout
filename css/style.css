@@ -161,7 +161,8 @@ body {
     margin-top: 45px;
 }
 
-.trends__title::after {
+.trends__title::after,
+.aside__posts-title::after {
     content: "";
     width: 67px;
     height: 4px;
@@ -290,7 +291,8 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.card-date {
+.card-date,
+.post-content__date {
     font-family: 'OpenSans', sans-serif;
     font-size: 0.75rem;
     line-height: 2.5rem;
@@ -319,28 +321,64 @@ body {
 
 }
 
+.card__img {
+    background-color: #eff6f1;
+}
+
 /* SIDE BAR
 =========================== */
 
-.latest-posts {
-    position: relative;
+.aside {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 0 20px;
 }
 
-.card-title {
-    width: 120px;
-    height: 12px;
-    position: absolute;
-    left: 120px;
+.aside__latest-posts {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.new-posts {
-    font-size: 16px;
-    line-height: 29px;
-    text-transform: uppercase;
-    color: #0f0d0e;
+.aside__post {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.post-content__title {
+    font-family: 'OpenSans', sans-serif;
     font-weight: 700;
-    font-family: "Open Sans";
+    color: black;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
 
+.post-content__date {
+    display: block;
+    margin: 0;
+    line-height: 1;
+}
+
+.aside-img {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
 }
 
 /* FOOTER
