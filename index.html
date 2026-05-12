@@ -165,18 +165,6 @@
             </div>
         </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
         <aside class="aside container">
             <section class="aside__latest-posts">
                 <div class="aside__posts-title">
@@ -227,42 +215,114 @@
                         </div>
                     </div>
                 </div>
-
             </section>
+
             <section class="search">
-
+                <input class="search__line" type="search" placeholder="Найти...">
+                <button class="search__button" type="button"></button>
             </section>
-            <section class="subscribe">
 
-            </section>
-            <section class="tags">
+            <form class="subscribe">
+                <div class="subscribe__title">
+                    <h2 class="titles">Рассылка</h2>
+                </div>
+                <input class="email__line" type="email" placeholder="Ваш e-mail адрес" required />
+                <input class="subscribe__button" type="submit" value="Подписаться" />
+            </form>
 
+            <section class="aside__tags">
+                <div class="tags__title">
+                    <h2 class="titles">Теги</h2>
+                </div>
+                <ul class="ul__tags">
+                    <li class="tags__name">Fashion</li>
+                    <li class="tags__name">Music</li>
+                    <li class="tags__name">Lifestule</li>
+                    <li class="tags__name">art</li>
+                    <li class="tags__name">Interior</li>
+                    <li class="tags__name">Travel</li>
+                    <li class="tags__name">Food</li>
+                    <li class="tags__name">Health</li>
+                </ul>
             </section>
+
+
             <section class="categories">
-
+                <div class="categories__title">
+                    <h2 class="titles">Темы</h2>
+                </div>
+                <ul class="categories__content">
+                    <li class="categories__name">Красота<sup class="sup-name">12</sup></li>
+                    <li class="categories__name">Здоровье<sup class="sup-name">4</sup></li>
+                    <li class="categories__name">Образ жизни<sup class="sup-name">145</sup></li>
+                    <li class="categories__name">Музыка<sup class="sup-name">28</sup></li>
+                    <li class="categories__name">Спорт<sup class="sup-name">62</sup></li>
+                    <li class="categories__name">Йога<sup class="sup-name">8</sup></li>
+                </ul>
             </section>
         </aside>
 
+        <section class="shop">
+            <div class="shop__title">
+                <h2 class="titles">Наши изделия</h2>
+            </div>
+            <div class="shop__card">
+                <img src="img/shop-item-mobile1.jpg" alt="Подушка с принтом" class="shop__card-img">
+                <div class="shop__card-content">
+                    <span class="card-content__title">подушки на диван</span>
+                    <label>
+                        <span class="card-content__description">Набор из двух подушек с модными принтами. Видео о
+                            создании
+                            <a href="#" class="here">здесь</a> </span>
+                    </label>
+                    <div class="shop-info">
+                        <div class="price">
+                            <span class="old-price">1000 ₽</span>
+                            <span class="new-price">800 ₽</span>
+                        </div>
+                        <button type="button" class="shop-btn">В магазин</button>
+                    </div>
+                </div>
+            </div>
+            <div class="shop__card">
+                <img src="img/shop-item-mobile2.jpg" alt="Кукла 'зайчик'" class="shop__card-img">
+                <div class="shop__card-content">
+                    <span class="card-content__title">Кукла "зайчик"</span>
+                    <label>
+                        <span class="card-content__description">Интерьерная рукодельная кукла "Зайчик", созданию которой
+                            посвящена <a href="#" class="here not-underlined">весення серия постов</a> в блоге и
+                            несколько
+                            подкастов. </span>
+                    </label>
+                    <div class="shop-info">
+                        <div class="price">
+                            <span class="new-price">3500 ₽</span>
+                        </div>
+                        <button type="button" class="shop-btn">В магазин</button>
+                    </div>
+                </div>
+            </div>
+            <div class="shop__card">
+                <img src="img/shop-item-mobile3.jpg" alt="Шестиугольная рамка" class="shop__card-img">
+                <div class="shop__card-content">
+                    <span class="card-content__title">Шестиугольная рамка</span>
+                    <label>
+                        <span class="card-content__description">Необычная рамка для украшения дома из видео <a href=""
+                                class="here not-underlined"> «Как сделать рамку из подручных средств за 30
+                                минут»</a></span>
+                    </label>
+                    <div class="shop-info">
+                        <div class="price">
+                            <span class="old-price">500 ₽</span>
+                            <span class="new-price">400 ₽</span>
+                        </div>
+                        <button type="button" class="shop-btn">В магазин</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="container">
                 <div class="footer__socials">
                     <img class="dribble-logo" src="svg/001-dribbble.svg" alt="dribble">
@@ -270,16 +330,11 @@
                     <img class="tumblr-logo" src="svg/003-tumblr.svg" alt="tumblr">
                 </div>
             </div>
-
             <p class="footer__copyright">
                 Copyright © 2009-2019 City Blog LLC.
             </p>
-
-
         </footer>
-
-    </div> -->
+    </div>
 </body>
-
 
 </html>
