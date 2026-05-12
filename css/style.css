@@ -189,15 +189,21 @@ body {
     width: 330px;
     height: 127px;
 
-    padding: 30px 22px;
+    padding: 30px 22px 0;
 
     z-index: 1;
 
     border: 3px solid #b59f5b;
 }
 
-.category__tag {
-    display: inline-block;
+.trend__tag,
+.card__tag {
+    display: flex;
+    gap: 15px;
+}
+
+.tag {
+    /* display: inline-block; */
     font-family: 'OpenSans', sans-serif;
     font-weight: 700;
     color: #b59f5b;
@@ -210,17 +216,18 @@ body {
 
 }
 
-.category__tag:hover {
+.tag:hover {
     text-decoration: underline;
     /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     /* text-shadow: 
     1px 1px 0px #000,
     2px 2px 0px #000,
     3px 3px 0px #000; */
 }
 
-.trend__title {
+.trend__title,
+.card__title {
     font-family: 'OpenSans', sans-serif;
     font-weight: 700;
     color: rgb(255, 255, 255);
@@ -245,6 +252,72 @@ body {
     pointer-events: none;
 }
 
+/* Post List
+============================ */
+
+.posts {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 20px 0 20px;
+}
+
+.posts__card {
+    box-sizing: border-box;
+    margin-top: 35px;
+    background-color: white;
+}
+
+.posts__card::after {
+    content: "";
+    width: 330px;
+    height: 3px;
+    background-color: #eeeeee;
+    margin-top: 21px;
+
+    display: block;
+}
+
+.card__content {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.card__title {
+    color: rgb(0, 0, 0);
+}
+
+.card-date {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 0.75rem;
+    line-height: 2.5rem;
+    color: #888888;
+}
+
+.card-author {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 0.75rem;
+    line-height: 2.5rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.card__article {
+    max-width: 330px;
+    min-height: 53px;
+    text-align: justify;
+}
+
+.article-text {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #0f0d0e;
+
+}
 
 /* SIDE BAR
 =========================== */
@@ -253,7 +326,7 @@ body {
     position: relative;
 }
 
-.post-title {
+.card-title {
     width: 120px;
     height: 12px;
     position: absolute;
