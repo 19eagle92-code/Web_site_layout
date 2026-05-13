@@ -11,9 +11,11 @@
 <body>
     <div class="page">
         <header class="header">
+            <label for="popup1">
+                <div class="menu"></div>
+            </label>
             <div class="container">
                 <div class="header__content">
-                    <div class="menu"></div>
                     <img class="header__logo" src="svg/noemi-logo.svg" alt="Логотип Noemi ">
                     <h1 class="header__intro">
                         Блог о творчестве, спорте, и образе жизни
@@ -21,6 +23,56 @@
                 </div>
             </div>
         </header>
+
+        <input type="checkbox" id="popup1" class="popup__toggle" checked>
+        <div class="popup">
+            <div class="popup__content">
+                <label for="popup1" class="popup__close">
+                    <img src="svg/form-x.svg" alt="Закрыть" class="close-icone">
+                </label>
+                <div class="popup__title">
+                    <h2 class="titles" id="no-margin">Ваш фидбек</h2>
+                </div>
+                <div class="popup__questions">
+                    <div class="days">
+                        <label for="visit-frequency" class="question">Как часто вы заходите на сайт?</label>
+                        <select class="visit" name="frequency" id="visit-frequency">
+                            <option value="daily" selected>Почти каждый день</option>
+                            <option value="weekly">Раз в несколько дней</option>
+                            <option value="monthly">Раз в несколько недель</option>
+                            <option value="rarely">Несколько раз в год</option>
+                        </select>
+                    </div>
+                    <div class="mailing">
+                        <span class="question">Вы подписвны на e-mail рассылку?</span>
+                        <div class="select">
+                            <label for="yes" class="select__yes">
+                                <input type="radio" id="yes" name="answer" value="yes">
+                                <img src="svg/form-circle.svg" alt="" class="radio__selected-img">
+                                <img src="svg/form-empty-circle.svg" alt="" class="radio__empty-img">
+                                <span class="yes">Да</span>
+                            </label>
+                            <label for="no" class="select__no">
+                                <input type="radio" id="no" name=" answer" value="no">
+                                <img src="svg/form-circle.svg" alt="" class="radio__selected-img">
+                                <img src="svg/form-empty-circle.svg" alt="" class="radio__empty-img">
+                                <span class="no">Нет</span>
+                            </label>
+                        </div>
+                    </div>
+                    <form class="feedback">
+                        <span class="question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+                        <label for="feedback-area">
+                            <textarea class="feedback__text" type="text" placeholder="Может, больше рецептов?"
+                                id="feedback-area"></textarea>
+                        </label>
+                        <input class="feedback__button" type="submit" value="Отправить" />
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
 
         <section class="trends container">
             <div class="trends__title">
