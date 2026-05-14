@@ -534,7 +534,6 @@ body {
 
 .posts__card {
     width: 100%;
-    max-width: 320px;
 
     margin-top: 35px;
     background-color: white;
@@ -608,7 +607,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
+
 }
 
 .aside__latest-posts {
@@ -692,6 +692,7 @@ body {
 ================================= */
 
 .subscribe {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1350,6 +1351,7 @@ body {
         display: flex;
 
         width: calc(50% - 5px);
+
     }
 
     .trend__content {
@@ -1420,47 +1422,39 @@ body {
         pointer-events: none;
     }
 
-    /* .overlay::after {
-        content: "";
-        position: absolute;
-        
-        inset: 0;
-        width: calc(50% - 5px);
-
-        background-color: rgba(0, 0, 0, 0.6);
-
-        pointer-events: none;
-
-    } */
-
-
-
     /* Post List
 ============================ */
+    .main__aside {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
 
     .posts {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-inline: 20px;
 
-        padding: 0 20px 0 20px;
+        gap: 30px;
     }
 
     .posts__card {
         width: 100%;
-        max-width: 320px;
 
-        margin-top: 35px;
         background-color: white;
 
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        margin: 0;
     }
 
     .posts__card::after {
         content: "";
         width: 100%;
+        /* max-width: 450px; */
         height: 3px;
         background-color: #eeeeee;
         margin-top: 21px;
@@ -1504,9 +1498,7 @@ body {
     }
 
     .card__img {
-        width: 100%;
         max-width: 100%;
-        height: auto;
         display: block;
         background-color: #eff6f1;
         background-position: center center;
@@ -1522,7 +1514,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 20px 0 20px;
     }
 
     .aside__latest-posts {
@@ -1608,11 +1599,14 @@ body {
     .subscribe {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 15px;
 
     }
 
     .email__line {
+        width: 100%;
+
         height: 50px;
         outline: none;
         background-color: #f4f7f6;
@@ -1622,6 +1616,7 @@ body {
 
     .subscribe__button {
         height: 50px;
+        width: 100%;
 
         font-weight: 700;
         color: black;
@@ -1640,6 +1635,12 @@ body {
     /* UL_TAGS
 ============================ */
 
+    .aside__tags {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .ul__tags {
         width: 100%;
 
@@ -1657,6 +1658,8 @@ body {
     .tags__name {
         display: flex;
 
+        width: calc((100% - 10) / 3);
+
 
         font-weight: 700;
         color: black;
@@ -1669,7 +1672,7 @@ body {
         border: 3px solid #eeeeee;
 
         list-style: none;
-        padding: 0 10px;
+        padding: 0 3%;
     }
 
 
@@ -1687,10 +1690,12 @@ body {
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
 
     }
 
     .categories__content {
+        width: 100%;
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -1721,30 +1726,40 @@ body {
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         padding: 0 20px;
     }
 
+    .shop__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: 2%;
+    }
+
     .shop__card {
-        width: 100%;
+        width: calc(50% - 1%);
         display: flex;
         flex-direction: column;
 
-        margin-top: -20px;
     }
 
-    .shop__card-img {
+    /* .shop__card-img {
 
         padding: 20px;
         padding-top: 0;
 
-    }
+    } */
 
     .shop__title::after {
         margin-bottom: 45px;
     }
 
     .shop__card-content {
+
+        min-height: 270px;
 
         padding: 20px;
         border: 3px solid #b59f5b;
