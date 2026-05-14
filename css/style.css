@@ -89,6 +89,17 @@ body {
     pointer-events: none;
 } */
 
+.overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    pointer-events: none;
+
+}
+
 .header .container {
     position: relative;
     z-index: 1;
@@ -157,6 +168,7 @@ body {
 }
 
 
+
 /* POPUP
 ============================== */
 
@@ -195,7 +207,6 @@ body {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
 
-    /* box-sizing: border-box; */
     padding: 20px;
 
     display: none;
@@ -422,7 +433,7 @@ body {
 .shop__title::after,
 .popup__title::after {
     content: "";
-    width: 67px;
+    width: 50%;
     height: 4px;
     opacity: 0.400;
     background-color: #b59f5b;
@@ -440,8 +451,6 @@ body {
 }
 
 .trend__content {
-    /* box-sizing: border-box; */
-
     position: absolute;
     bottom: 15px;
 
@@ -495,7 +504,7 @@ body {
     margin: 0;
 }
 
-/* .trend::after {
+.trend::after {
     content: "";
     display: block;
     position: absolute;
@@ -506,18 +515,9 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-} */
-
-.overlay::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-color: rgba(0, 0, 0, 0.6);
-
-    pointer-events: none;
-
 }
+
+
 
 
 
@@ -535,7 +535,7 @@ body {
 .posts__card {
     width: 100%;
     max-width: 320px;
-    /* box-sizing: border-box; */
+
     margin-top: 35px;
     background-color: white;
 
@@ -742,7 +742,6 @@ body {
 
 .tags__name {
     display: flex;
-    /* box-sizing: border-box; */
 
     font-weight: 700;
     color: black;
@@ -784,7 +783,6 @@ body {
 }
 
 .categories__name {
-    /* box-sizing: border-box; */
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 2.25rem;
@@ -936,7 +934,6 @@ body {
     margin: 0 auto;
 
     background-color: #f4f7f6;
-    /* box-sizing: border-box; */
 
     display: flex;
     align-items: center;
@@ -972,7 +969,7 @@ body {
 ===============================================
 ================================================ */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     /* tablet */
 
     /* HEADER
@@ -980,46 +977,31 @@ body {
 
     .header {
         position: relative;
-        width: 100%;
+        /* width: 100%; */
 
         min-height: 100vh;
-        /* max-height: 100%; */
 
+        /* display: flex;
+        flex-direction: column; */
 
-        display: flex;
-        flex-direction: column;
+        padding: 80px;
 
-        padding: 30px;
-
-        background-image: url("/img/banner-mobile.jpg");
+        background-image: url("/img/banner-bg-tablet.jpg/");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         background-color: #999999;
     }
 
-    /* .header::after {
-    content: "";
-    display: block;
-    position: absolute;
-    opacity: 0.600;
-    background-color: #000000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-} */
-
     .header .container {
         position: relative;
         z-index: 1;
         width: 100%;
-        flex: 1;
+        /* flex: 1; */
 
         display: flex;
-        align-items: center;
-        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: center; */
     }
 
     .header__content {
@@ -1065,7 +1047,7 @@ body {
     .header__logo {
         width: 269px;
         height: 61px;
-        margin-bottom: 43px;
+        /* margin-bottom: 43px; */
 
     }
 
@@ -1074,7 +1056,8 @@ body {
         color: white;
         text-transform: uppercase;
         text-align: center;
-        font-size: 1.625rem;
+        font-size: 2.5rem;
+        line-height: 3.4375rem;
         margin: 0;
     }
 
@@ -1117,7 +1100,6 @@ body {
         inset: 0;
         background-color: rgba(0, 0, 0, 0.5);
 
-        /* box-sizing: border-box; */
         padding: 20px;
 
         display: none;
@@ -1180,8 +1162,6 @@ body {
         gap: 5px;
         flex-grow: 1;
     }
-
-
 
     .visit {
         width: 100%;
@@ -1324,6 +1304,8 @@ body {
         align-items: center;
         gap: 5px;
 
+        margin-bottom: 20px;
+
     }
 
     .titles {
@@ -1331,7 +1313,7 @@ body {
         color: #0f0d0e;
         text-transform: uppercase;
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.125rem;
         margin-bottom: 8px;
         margin-top: 45px;
     }
@@ -1344,7 +1326,7 @@ body {
     .shop__title::after,
     .popup__title::after {
         content: "";
-        width: 67px;
+        width: 50%;
         height: 4px;
         opacity: 0.400;
         background-color: #b59f5b;
@@ -1355,14 +1337,22 @@ body {
         margin-bottom: 25px;
     }
 
+    .trend__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
     .trend {
         position: relative;
         display: flex;
-        justify-content: center;
+
+        width: calc(50% - 5px);
     }
 
     .trend__content {
-        /* box-sizing: border-box; */
 
         position: absolute;
         bottom: 15px;
@@ -1417,29 +1407,31 @@ body {
         margin: 0;
     }
 
-    /* .trend::after {
-    content: "";
-    display: block;
-    position: absolute;
-    opacity: 0.600;
-    background-color: #000000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-} */
+    .trend::after {
+        content: "";
+        display: block;
+        position: absolute;
+        opacity: 0.600;
+        background-color: #000000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
 
-    .overlay::after {
+    /* .overlay::after {
         content: "";
         position: absolute;
+        
         inset: 0;
+        width: calc(50% - 5px);
 
         background-color: rgba(0, 0, 0, 0.6);
 
         pointer-events: none;
 
-    }
+    } */
 
 
 
@@ -1457,7 +1449,7 @@ body {
     .posts__card {
         width: 100%;
         max-width: 320px;
-        /* box-sizing: border-box; */
+
         margin-top: 35px;
         background-color: white;
 
@@ -1664,7 +1656,7 @@ body {
 
     .tags__name {
         display: flex;
-        /* box-sizing: border-box; */
+
 
         font-weight: 700;
         color: black;
@@ -1706,7 +1698,7 @@ body {
     }
 
     .categories__name {
-        /* box-sizing: border-box; */
+
         font-weight: 700;
         font-size: 0.875rem;
         line-height: 2.25rem;
