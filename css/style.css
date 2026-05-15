@@ -48,6 +48,7 @@ img {
 
 .page {
     max-width: 1660px;
+    margin: 0 auto;
 }
 
 body {
@@ -63,6 +64,13 @@ body {
 
 /* HEADER
 ========================*/
+.menu {
+    list-style: none;
+}
+
+.menu__name a {
+    display: none;
+}
 
 .header {
     position: relative;
@@ -106,7 +114,7 @@ body {
     justify-content: center;
 }
 
-.menu {
+.burger__menu {
     width: 23px;
     height: 4px;
     background-color: #ffffff;
@@ -117,8 +125,8 @@ body {
     margin: 0 0 auto auto;
 }
 
-.menu::before,
-.menu::after {
+.burger__menu::before,
+.burger__menu::after {
     content: "";
     position: absolute;
     width: 23px;
@@ -126,11 +134,11 @@ body {
     background-color: #ffffff;
 }
 
-.menu::before {
+.burger__menu::before {
     top: -8px;
 }
 
-.menu::after {
+.burger__menu::after {
     bottom: -8px;
 }
 
@@ -395,7 +403,7 @@ body {
 .shop__title::after,
 .popup__title::after {
     content: "";
-    width: 50%;
+    width: 70px;
     height: 4px;
     opacity: 0.400;
     background-color: #b59f5b;
@@ -760,6 +768,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     padding: 0 20px;
 }
@@ -777,6 +786,11 @@ body {
     padding: 20px;
     padding-top: 0;
 
+}
+
+.shop__title {
+    display: block;
+    object-view-box: ;
 }
 
 .shop__title::after {
@@ -1049,10 +1063,6 @@ body {
         gap: 2%;
     }
 
-    /* .shop__title::after {
-        margin-bottom: 45px;
-    } */
-
     .shop__card-content {
         min-height: 270px;
     }
@@ -1067,6 +1077,37 @@ body {
     /* desktop */
     /* HEADER
 ========================*/
+
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-self: center;
+        justify-content: end;
+
+        gap: 30px;
+
+    }
+
+    .menu__name a {
+        position: relative;
+        display: flex;
+
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.9375rem;
+        line-height: 1.375rem;
+
+        z-index: 2;
+
+    }
+
+    .burger__menu {
+        display: none;
+    }
 
     .header {
         background-image: url("/img/banner-bg.jpg");
