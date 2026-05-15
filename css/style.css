@@ -981,9 +981,6 @@ body {
 @media (min-width: 768px) {
     /* tablet */
 
-    /* HEADER
-========================*/
-
     .header {
         position: relative;
 
@@ -1008,10 +1005,6 @@ body {
         margin-bottom: auto;
     }
 
-    /* TREANDS
-================================= */
-
-
     .trend__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1019,8 +1012,6 @@ body {
         gap: 5px;
     }
 
-    /* Post List
-============================ */
     .main__aside {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -1032,29 +1023,9 @@ body {
         line-height: 1.375rem;
     }
 
-    /* SIDE BAR
-=========================== */
-
-    /* SEARCH
-============================ */
-
-    /* Subscribe
-================================= */
-
-
-    /* UL_TAGS
-============================ */
-
     .tags__name {
         padding: 0 3%;
     }
-
-    /* CATEGORIES
-=========================== */
-
-
-    /* SHOP
-================================== */
 
     .shop__content {
         display: grid;
@@ -1066,17 +1037,11 @@ body {
     .shop__card-content {
         min-height: 270px;
     }
-
-    /* FOOTER
-========================= */
-
 }
 
 
 @media (min-width: 1024px) {
     /* desktop */
-    /* HEADER
-========================*/
 
     .menu {
         list-style: none;
@@ -1087,7 +1052,6 @@ body {
         justify-content: end;
 
         gap: 30px;
-
     }
 
     .menu__name a {
@@ -1102,7 +1066,6 @@ body {
         line-height: 1.375rem;
 
         z-index: 2;
-
     }
 
     .burger__menu {
@@ -1112,8 +1075,6 @@ body {
     .header {
         background-image: url("/img/banner-bg.jpg");
         padding-inline: 14%;
-
-
     }
 
     .header__container {
@@ -1123,9 +1084,6 @@ body {
     .titles {
         font-size: 1.25rem;
     }
-
-    /* TREANDS
-================================= */
 
     .trend__container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1137,8 +1095,6 @@ body {
 
     }
 
-    /* Post List
-============================ */
     .main__aside {
         padding-inline: 14%;
     }
@@ -1169,8 +1125,6 @@ body {
         padding-inline: 14%;
     }
 
-    /* FOOTER
-========================= */
     .footer {
         padding-inline: 14%;
     }
