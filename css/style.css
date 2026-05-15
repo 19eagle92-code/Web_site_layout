@@ -84,7 +84,7 @@ body {
 
 }
 
-.header .container {
+.header__container {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -92,18 +92,9 @@ body {
     flex: 1;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header__content {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    width: 100%;
-    max-width: 100%;
 }
 
 .menu {
@@ -923,6 +914,37 @@ body {
     }
 }
 
+@media (max-height: 360px) {
+
+    .popup__content {
+        padding-bottom: 0;
+    }
+
+    .popup__content {
+        max-width: none;
+        width: 100%;
+
+        min-height: 360px;
+        max-height: 100vh;
+    }
+
+    .feedback__text {
+        min-height: auto;
+    }
+
+    .popup__questions {
+        gap: 5px;
+    }
+
+    .mailing {
+        flex-grow: 0;
+    }
+
+    .days {
+        flex-grow: 0;
+    }
+}
+
 /* ==============================================
 ===============================================
 ================================================ */
@@ -941,66 +963,20 @@ body {
         background-image: url("/img/banner-bg-tablet.jpg");
     }
 
-    .header .container {
-        position: relative;
-        z-index: 1;
-        width: 100%;
+    .header__container {
         min-height: 60vh;
-
-        display: flex;
-    }
-
-    /* .header__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-        max-width: 100%;
-    } */
-
-    .menu {
-        width: 23px;
-        height: 4px;
-        background-color: #ffffff;
-        z-index: 2;
-
-        position: relative;
-        align-self: end;
-        margin: 0 0 auto auto;
-    }
-
-    .menu::before,
-    .menu::after {
-        content: "";
-        position: absolute;
-        width: 23px;
-        height: 4px;
-        background-color: #ffffff;
-    }
-
-    .menu::before {
-        top: -8px;
-    }
-
-    .menu::after {
-        bottom: -8px;
     }
 
     .header__logo {
-        width: 269px;
-        height: 61px;
+        margin-right: auto;
+        margin-bottom: auto;
     }
 
     .header__intro {
-        font-weight: 700;
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
         font-size: 2.5rem;
         line-height: 3.4375rem;
-        margin: 0;
+
+        margin-bottom: auto;
     }
 
 
