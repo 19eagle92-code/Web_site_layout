@@ -929,7 +929,7 @@ body {
 ================================================ */
 @media (min-width: 640px) {
     .header {
-        background-image: url("/img/banner-bg-tablet.jpg");
+        background-image: url("../img/banner-bg-tablet.jpg");
     }
 }
 
