@@ -84,7 +84,7 @@ body {
 
     padding: 30px;
 
-    background-image: url("/img/banner-mobile.jpg");
+    background-image: url("../img/banner-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -635,7 +635,7 @@ body {
 .search__button {
     min-width: 50px;
     flex-grow: 1;
-    background-image: url(/svg/search.svg);
+    background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-color: #b59f5b;
