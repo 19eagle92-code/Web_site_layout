@@ -53,13 +53,13 @@
                 <div class="mailing">
                     <span class="question">Вы подписвны на e-mail рассылку?</span>
                     <div class="select">
-                        <label for="yes" class="select__yes">
+                        <label for="yes" class="select__yes radio">
                             <input type="radio" id="yes" name="answer" value="yes">
                             <img src="svg/form-circle.svg" alt="" class="radio__selected-img">
                             <img src="svg/form-empty-circle.svg" alt="" class="radio__empty-img">
                             <span class="yes">Да</span>
                         </label>
-                        <label for="no" class="select__no">
+                        <label for="no" class="select__no radio">
                             <input type="radio" id="no" name="answer" value="no">
                             <img src="svg/form-circle.svg" alt="" class="radio__selected-img">
                             <img src="svg/form-empty-circle.svg" alt="" class="radio__empty-img">
@@ -75,10 +75,8 @@
                     </label>
                     <input class="feedback__button" type="submit" value="Отправить">
                 </form>
-
             </div>
         </div>
-
     </div>
 
     <section class="trends">
@@ -132,7 +130,7 @@
         <main class="posts">
 
 
-            <article class="posts__card">
+            <article class="posts__card card ">
                 <img src="img/last-post1.jpg" alt="Рассвет" class="card__img">
                 <div class="card__content">
                     <div class="card__tags">
@@ -152,7 +150,7 @@
 
 
 
-            <article class="posts__card">
+            <article class="posts__card card">
                 <img src="img/last-post2.jpg" alt="Йога" class="card__img">
                 <div class="card__content">
                     <div class="card__tags">
@@ -171,7 +169,7 @@
             </article>
 
 
-            <article class="posts__card">
+            <article class="posts__card card">
                 <img src="img/last-post3.jpg" alt="Фестиваль" class="card__img">
                 <div class="card__content">
                     <div class="card__tags">
@@ -191,7 +189,7 @@
             </article>
 
 
-            <article class="posts__card">
+            <article class="posts__card card">
                 <img src="img/last-post4.jpg" alt="Еда на столе" class="card__img">
                 <div class="card__content">
                     <div class="card__tags">
@@ -210,7 +208,7 @@
             </article>
 
 
-            <article class="posts__card">
+            <article class="posts__card card">
                 <img src="img/last-post5.jpg" alt="Принт на подушке" class="card__img">
                 <div class="card__content">
                     <div class="card__tags">
@@ -280,21 +278,21 @@
 
             <form class="subscribe">
                 <h2 class="titles">Рассылка</h2>
-                <input class="email__line" type="email" placeholder="Ваш e-mail адрес" required>
+                <input class="subscribe__email-line" type="email" placeholder="Ваш e-mail адрес" required>
                 <input class="subscribe__button" type="submit" value="Подписаться">
             </form>
 
-            <section class="aside__tags">
+            <section class="aside__tags tags">
                 <h2 class="titles">Теги</h2>
-                <ul class="ul__tags">
-                    <li class="tags__name"><a href="#">Fashion</a></li>
-                    <li class="tags__name"><a href="#">Music</a></li>
-                    <li class="tags__name"><a href="#">Lifestule</a></li>
-                    <li class="tags__name"><a href="#">art</a></li>
-                    <li class="tags__name"><a href="#">Interior</a></li>
-                    <li class="tags__name"><a href="#">Travel</a></li>
-                    <li class="tags__name"><a href="#">Food</a></li>
-                    <li class="tags__name"><a href="#">Health</a></li>
+                <ul class="tags__ul">
+                    <li class="tags__item"><a href="#">Fashion</a></li>
+                    <li class="tags__item"><a href="#">Music</a></li>
+                    <li class="tags__item"><a href="#">Lifestule</a></li>
+                    <li class="tags__item"><a href="#">art</a></li>
+                    <li class="tags__item"><a href="#">Interior</a></li>
+                    <li class="tags__item"><a href="#">Travel</a></li>
+                    <li class="tags__item"><a href="#">Food</a></li>
+                    <li class="tags__item"><a href="#">Health</a></li>
                 </ul>
             </section>
 
@@ -318,56 +316,51 @@
         <div class="shop__content">
             <div class="shop__card">
                 <img src="img/shop-item-mobile1.jpg" alt="Подушка с принтом" class="shop__card-img">
-                <div class="shop__card-content">
-                    <span class="card-content__title">подушки на диван</span>
-                    <label>
-                        <span class="card-content__description">Набор из двух подушек с модными принтами. Видео о
-                            создании
-                            <a href="#" class="here">здесь</a> </span>
-                    </label>
+                <div class="shop__card-info">
+                    <h3 class="shop__card-title">подушки на диван</h3>
+                    <p class="shop__description">Набор из двух подушек с модными принтами. Видео о
+                        создании
+                        <a href="#" class="shop__card-link">здесь</a>
+                    </p>
                     <div class="shop-info">
                         <div class="price">
                             <span class="old-price">1000 ₽</span>
                             <span class="new-price">800 ₽</span>
                         </div>
-                        <button type="button" class="shop-btn">В магазин</button>
+                        <button type="button" class="shop__card-button">В магазин</button>
                     </div>
                 </div>
             </div>
             <div class="shop__card">
                 <img src="img/shop-item-mobile2.jpg" alt="Кукла 'зайчик'" class="shop__card-img">
-                <div class="shop__card-content">
-                    <span class="card-content__title">Кукла "зайчик"</span>
-                    <label>
-                        <span class="card-content__description">Интерьерная рукодельная кукла "Зайчик", созданию
-                            которой
-                            посвящена <a href="#" class="here not-underlined">весення серия постов</a> в блоге и
-                            несколько
-                            подкастов. </span>
-                    </label>
+                <div class="shop__card-info">
+                    <h3 class="shop__card-title">Кукла "зайчик"</h3>
+                    <p class="shop__description">Интерьерная рукодельная кукла "Зайчик", созданию
+                        которой
+                        посвящена <a href="#" class="here not-underlined">весення серия постов</a> в блоге и
+                        несколько
+                        подкастов. </p>
                     <div class="shop-info">
                         <div class="price">
                             <span class="new-price">3500 ₽</span>
                         </div>
-                        <button type="button" class="shop-btn">В магазин</button>
+                        <button type="button" class="shop__card-button">В магазин</button>
                     </div>
                 </div>
             </div>
             <div class="shop__card">
                 <img src="img/shop-item-mobile3.jpg" alt="Шестиугольная рамка" class="shop__card-img">
-                <div class="shop__card-content">
-                    <span class="card-content__title">Шестиугольная рамка</span>
-                    <label>
-                        <span class="card-content__description">Необычная рамка для украшения дома из видео <a href=""
-                                class="here not-underlined"> «Как сделать рамку из подручных средств за 30
-                                минут»</a></span>
-                    </label>
+                <div class="shop__card-info">
+                    <h3 class="shop__card-title">Шестиугольная рамка</h3>
+                    <p class="shop__description">Необычная рамка для украшения дома из видео <a href=""
+                            class="shop__card-link not-underlined"> «Как сделать рамку из подручных средств за 30
+                            минут»</a></p>
                     <div class="shop-info">
                         <div class="price">
                             <span class="old-price">500 ₽</span>
                             <span class="new-price">400 ₽</span>
                         </div>
-                        <button type="button" class="shop-btn">В магазин</button>
+                        <button type="button" class="shop__card-button">В магазин</button>
                     </div>
                 </div>
             </div>
