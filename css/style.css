@@ -976,7 +976,7 @@ body {
 
         min-height: 100%;
 
-        background-image: url("/img/banner-bg-tablet.jpg");
+        background-image: url("../img/banner-bg-tablet.jpg");
     }
 
     .header__container {
@@ -1063,7 +1063,7 @@ body {
     }
 
     .header {
-        background-image: url("/img/banner-bg.jpg");
+        background-image: url("../img/banner-bg.jpg");
         padding-inline: 14%;
     }
 
