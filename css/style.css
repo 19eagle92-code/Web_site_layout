@@ -30,6 +30,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --gold: #b59f5b;
+}
+
 body,
 h1,
 h2,
@@ -123,7 +127,7 @@ body {
     z-index: 2;
 
     position: relative;
-    align-self: end;
+    /* align-self: end; */
     margin: 0 0 auto auto;
 }
 
@@ -364,9 +368,14 @@ body {
 
     margin-top: 20px;
 
-    background-color: #b59f5b;
+    background-color: var(--gold);
 
     border: none;
+}
+
+.subscribe__button:hover,
+.feedback__button:hover {
+    outline: 2px solid #4d90fe;
 }
 
 /* TREANDS
@@ -397,12 +406,12 @@ body {
     width: 67px;
     height: 4px;
     opacity: 0.400;
-    background-color: #b59f5b;
+    background-color: var(--gold);
 
     display: block;
     margin: 0 auto;
     margin-top: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .trends__container {
@@ -423,7 +432,6 @@ body {
 }
 
 .trend__content {
-    /* box-sizing: content-box; */
     position: absolute;
     bottom: 15px;
 
@@ -435,7 +443,7 @@ body {
 
     z-index: 1;
 
-    border: 3px solid #b59f5b;
+    border: 3px solid var(--gold);
 }
 
 .trend__tags,
@@ -454,7 +462,7 @@ body {
 
 .tag {
     font-weight: 700;
-    color: #b59f5b;
+    color: var(--gold);
     text-transform: uppercase;
     text-align: center;
     font-size: 0.875rem;
@@ -489,13 +497,15 @@ body {
 
 /* Post List
 ============================ */
+.main-aside {
+    padding-inline: 20px;
+}
 
 .posts {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding: 0 20px;
 }
 
 .posts__card {
@@ -578,7 +588,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
 }
 
 .aside__latest-posts {
@@ -655,7 +664,7 @@ body {
     background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 18px 18px;
-    background-color: #b59f5b;
+    background-color: var(--gold);
     background-position: center center;
     border: none;
 }
@@ -698,7 +707,7 @@ body {
     font-weight: 700;
     text-align: center;
 
-    background-color: #b59f5b;
+    background-color: var(--gold);
 
     border: none;
 }
@@ -721,7 +730,7 @@ body {
     padding-inline-start: 0;
     margin: 0;
 
-    gap: 8px;
+    gap: 6px;
 
 }
 
@@ -780,7 +789,7 @@ body {
     font-weight: 700;
     font-size: 0.75rem;
     line-height: 2.9375rem;
-    color: #b59f5b;
+    color: var(--gold);
 }
 
 /* SHOP
@@ -830,10 +839,10 @@ body {
 }
 
 .shop__card-info {
+    width: 100%;
 
     padding: 50px 10px 20px 20px;
-    border: 3px solid #b59f5b;
-    padding-top: 50px;
+    border: 3px solid var(--gold);
 
     position: relative;
 
@@ -863,7 +872,6 @@ body {
 }
 
 .old-price {
-    display: block;
     text-decoration: line-through;
 
     font-size: 0.875rem;
@@ -871,8 +879,6 @@ body {
 }
 
 .new-price {
-    display: block;
-
     font-size: 1.25rem;
     line-height: 1.5rem;
 }
@@ -883,7 +889,7 @@ body {
 }
 
 .shop__card-link {
-    color: #b59f5b;
+    color: var(--gold);
 }
 
 .shop__card-link:hover {
@@ -913,7 +919,7 @@ body {
     font-weight: 700;
     text-align: center;
 
-    background-color: #b59f5b;
+    background-color: var(--gold);
 
     border: none;
 }
@@ -930,12 +936,11 @@ body {
     flex-direction: column;
     align-items: center;
 
-    padding-inline: 30px;
+    padding-inline: 20px;
 }
 
 .container {
     width: 100%;
-    margin: 0;
 }
 
 .footer__socials {
@@ -980,11 +985,51 @@ body {
 /* ===============================================
 ===============================================
 ================================================ */
-@media (min-width: 640px) {
-    .header {
-        background-image: url("../img/banner-bg-tablet.jpg");
+
+@media (max-width: 520px) and (orientation: landscape) {
+    .trends__container {
+        display: flex;
+        flex-direction: column;
+
+        gap: 3px;
     }
 }
+
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .trends__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+    }
+}
+
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+    .trends__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+    .trends__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+    .trend__title {
+        font-size: 0.7rem;
+        line-height: 1;
+    }
+
+    .trend__content {
+        max-height: 100%;
+    }
+}
+
 
 @media (max-height: 360px) {
 
@@ -1027,37 +1072,73 @@ body {
     .header {
         position: relative;
 
-        min-height: 100%;
+        min-height: 392px;
 
         background-image: url("../img/banner-bg-tablet.jpg");
     }
 
-    .header__container {
-        min-height: 60vh;
-    }
-
     .header__logo {
+        height: 36px;
+        width: 158px;
         margin-right: auto;
         margin-bottom: auto;
+        position: relative;
+        top: -36px;
     }
 
     .header__intro {
         font-size: 2.5rem;
         line-height: 3.4375rem;
 
+        width: 636px;
         margin-bottom: auto;
     }
 
-    .trends__container {
+    .trend {
+        max-height: 248px;
+    }
+
+    /* .trends__container {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
         gap: 5px;
+    } */
+
+    .trend__background {
+        width: 100%;
     }
 
     .main-aside {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1.4fr;
+
+        gap: 5px;
+
+    }
+
+    .aside__title {
+        margin-top: 0;
+
+    }
+
+    .card__title {
+        font-size: 1.0625rem;
+        line-height: 1.375rem;
+    }
+
+    .posts {
+        padding-inline: 15px;
+    }
+
+    .aside {
+        padding-inline: 15px;
+    }
+
+    .card__meta {
+        margin-top: 5px;
+        margin-bottom: 5px;
 
     }
 
@@ -1074,16 +1155,20 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        gap: 2%;
+        gap: 20px;
     }
 
-    .shop__card-info {
-        min-height: 270px;
+    .shop__card {
+        margin-top: 0;
+    }
+
+    .footer {
+        margin-top: 30px;
     }
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
     /* desktop */
 
     .menu__list {
@@ -1095,6 +1180,23 @@ body {
         justify-content: end;
 
         gap: 30px;
+    }
+
+    .header__intro {
+        font-size: 2.8125rem;
+        line-height: 4.6875rem;
+
+        width: 715px;
+
+        position: relative;
+        top: -41px;
+    }
+
+    .header__logo {
+        height: 41px;
+        width: 179px;
+
+        top: -41px;
     }
 
     .menu__name a {
@@ -1118,33 +1220,39 @@ body {
     .header {
         background-image: url("../img/banner-bg.jpg");
         padding-inline: 14%;
-    }
-
-    .header__container {
-        min-height: 20vh;
+        min-height: 450px;
     }
 
     .titles {
         font-size: 1.25rem;
+        line-height: 1.82rem;
     }
 
     .trends__container {
+        width: 100%;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        gap: 5px
     }
 
-    .trend__content {
-
-        padding: 15px 20px 0;
-
-    }
 
     .main-aside {
+        grid-template-columns: 2.7fr 1fr;
+        gap: 74px;
+        /* padding-inline: 230px; */
         padding-inline: 14%;
+    }
+
+    .trend {
+
+        max-height: 300px;
+
     }
 
     .posts__card::after {
         display: none;
-        ;
+
     }
 
     .posts__card {
@@ -1152,9 +1260,22 @@ body {
         grid-template-columns: 1fr 1fr;
 
         height: 100%;
-        margin-top: 0;
+        margin-bottom: 59px;
 
         gap: 20px;
+    }
+
+    .posts__card:last-child {
+        margin-bottom: 0;
+    }
+
+    .card__content {
+        height: 100%;
+    }
+
+    .card__img {
+        height: 295px;
+        width: 100%;
     }
 
     .shop__content {
@@ -1172,4 +1293,23 @@ body {
         padding-inline: 14%;
     }
 
+}
+
+@media (min-width: 1661px) {
+
+    .trends,
+    .main-aside,
+    .shop,
+    .footer {
+        max-width: 1660px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .card__img {
+        height: 100%;
+        width: 100%;
+    }
 }
