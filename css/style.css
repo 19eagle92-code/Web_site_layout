@@ -52,7 +52,7 @@ img {
     display: block;
 }
 
-.body {
+body {
     max-width: 1660px;
     margin: 0 auto;
 }
@@ -64,6 +64,7 @@ body {
 
 
 .container {
+    width: 100%;
     margin: 0;
 }
 
@@ -219,7 +220,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    flex: 1;
+    /* flex: 1; */
 }
 
 .popup__questions {
@@ -378,7 +379,7 @@ body {
     outline: 2px solid #4d90fe;
 }
 
-/* TREANDS
+/* TRENDS
 ================================= */
 
 .trends {
@@ -712,9 +713,6 @@ body {
     border: none;
 }
 
-.subscribe__email-line:hover {
-    outline: 2px solid #4d90fe;
-}
 
 /* UL_TAGS
 ============================ */
@@ -939,10 +937,6 @@ body {
     padding-inline: 20px;
 }
 
-.container {
-    width: 100%;
-}
-
 .footer__socials {
     width: 100%;
 
@@ -986,14 +980,14 @@ body {
 ===============================================
 ================================================ */
 
-@media (max-width: 520px) and (orientation: landscape) {
+/* @media (max-width: 520px) and (orientation: landscape) {
     .trends__container {
         display: flex;
         flex-direction: column;
 
         gap: 3px;
     }
-}
+} */
 
 
 @media (max-width: 640px) and (orientation: landscape) {
